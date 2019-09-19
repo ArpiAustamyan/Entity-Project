@@ -1,0 +1,12 @@
+C:\Users\santr\source\repos\Reservation\Reservation\bin\Debug\Reservation.exe.config
+C:\Users\santr\source\repos\Reservation\Reservation\bin\Debug\Reservation.exe
+C:\Users\santr\source\repos\Reservation\Reservation\bin\Debug\Reservation.pdb
+C:\Users\santr\source\repos\Reservation\Reservation\bin\Debug\EntityFramework.dll
+C:\Users\santr\source\repos\Reservation\Reservation\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\santr\source\repos\Reservation\Reservation\bin\Debug\EntityFramework.xml
+C:\Users\santr\source\repos\Reservation\Reservation\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\santr\source\repos\Reservation\Reservation\obj\Debug\Reservation.csprojAssemblyReference.cache
+C:\Users\santr\source\repos\Reservation\Reservation\obj\Debug\Reservation.csproj.CoreCompileInputs.cache
+C:\Users\santr\source\repos\Reservation\Reservation\obj\Debug\Reservation.csproj.CopyComplete
+C:\Users\santr\source\repos\Reservation\Reservation\obj\Debug\Reservation.exe
+C:\Users\santr\source\repos\Reservation\Reservation\obj\Debug\Reservation.pdb
