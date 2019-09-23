@@ -17,7 +17,7 @@ namespace Reservation.Models
         
         public int? RoomId { get; set; }
 
-        //[ForeignKey("RoomId")]
-        //public Room Rooms { set; get; }
+        [ForeignKey("RoomId")]
+        public Room Rooms { set; get; }
     }
 }

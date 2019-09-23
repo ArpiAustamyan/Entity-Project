@@ -52,6 +52,14 @@
     <Compile Include="Migrations\201909231343191_Reservation.Designer.cs">
       <DependentUpon>201909231343191_Reservation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201909231553044_Reservation1.cs" />
+    <Compile Include="Migrations\201909231553044_Reservation1.Designer.cs">
+      <DependentUpon>201909231553044_Reservation1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909232009576_User.cs" />
+    <Compile Include="Migrations\201909232009576_User.Designer.cs">
+      <DependentUpon>201909232009576_User.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Booking.cs" />
     <Compile Include="Models\BookingTechnic.cs" />
@@ -70,6 +78,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201909231343191_Reservation.resx">
       <DependentUpon>201909231343191_Reservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909231553044_Reservation1.resx">
+      <DependentUpon>201909231553044_Reservation1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909232009576_User.resx">
+      <DependentUpon>201909232009576_User.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

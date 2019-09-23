@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Reservation.Data
+namespace Reservation
 {
     public class ReservContext : DbContext
     {
@@ -25,11 +25,6 @@ namespace Reservation.Data
         public DbSet<BookingUser> BookingUsers { get; set; }
 
         public DbSet<RoomFurniture> RoomFurnitures { get; set; }
-
-        //protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        //{
-        //    base.OnModelCreating(modelBuilder);
-        //}
 
     }
 }
