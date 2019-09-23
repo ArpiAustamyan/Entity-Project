@@ -14,5 +14,6 @@ namespace Reservation.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { set; get; }
         public string Name { set; get; }
+        public int HourlyCost { set; get; }
     }
 }
