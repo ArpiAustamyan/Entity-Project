@@ -52,7 +52,6 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Context\Context.cs" />
     <Compile Include="UserFunctions.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -60,8 +59,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary1\Reservation.Data.csproj">
-      <Project>{c8df2da8-ccf3-4ee6-9610-92a1f6c76686}</Project>
+    <ProjectReference Include="..\Reservation.Data\Reservation.Data.csproj">
+      <Project>{597adc49-15d3-48d5-a91f-cbfc959cf9c2}</Project>
       <Name>Reservation.Data</Name>
     </ProjectReference>
   </ItemGroup>

@@ -1,0 +1,13 @@
+C:\Users\santr\OneDrive\Рабочий стол\Entity project\Reservation\Reservation.Data\obj\Debug\Reservation.Data.csproj.CoreCompileInputs.cache
+C:\Users\santr\OneDrive\Рабочий стол\Entity project\Reservation\Reservation.Data\bin\Debug\Reservation.Data.dll.config
+C:\Users\santr\OneDrive\Рабочий стол\Entity project\Reservation\Reservation.Data\bin\Debug\Reservation.Data.dll
+C:\Users\santr\OneDrive\Рабочий стол\Entity project\Reservation\Reservation.Data\bin\Debug\Reservation.Data.pdb
+C:\Users\santr\OneDrive\Рабочий стол\Entity project\Reservation\Reservation.Data\bin\Debug\EntityFramework.dll
+C:\Users\santr\OneDrive\Рабочий стол\Entity project\Reservation\Reservation.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\santr\OneDrive\Рабочий стол\Entity project\Reservation\Reservation.Data\bin\Debug\EntityFramework.xml
+C:\Users\santr\OneDrive\Рабочий стол\Entity project\Reservation\Reservation.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\santr\OneDrive\Рабочий стол\Entity project\Reservation\Reservation.Data\obj\Debug\Reservation.Data.csproj.CopyComplete
+C:\Users\santr\OneDrive\Рабочий стол\Entity project\Reservation\Reservation.Data\obj\Debug\Reservation.Data.dll
+C:\Users\santr\OneDrive\Рабочий стол\Entity project\Reservation\Reservation.Data\obj\Debug\Reservation.Data.pdb
+C:\Users\santr\OneDrive\Рабочий стол\Entity project\Reservation\Reservation.Data\obj\Debug\Reservation.Data.Migrations.Reservation.resources
+C:\Users\santr\OneDrive\Рабочий стол\Entity project\Reservation\Reservation.Data\obj\Debug\Reservation.Data.csproj.GenerateResource.cache
