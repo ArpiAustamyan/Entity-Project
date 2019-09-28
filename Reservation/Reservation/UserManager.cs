@@ -1,16 +1,18 @@
-﻿using System;
+﻿using Reservation.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static Reservation.ReservationInfo;
 
 namespace Reservation
 {
-    public static class UserManager
+    public class UserManager
     {
-        public static void Add(User user)
+        public void Add(User user)
         {
-            if(user.Name.Length>=3 && user.LastName.Length>=3)
+            if (user.Name.Length >= 3 && user.LastName.Length >= 3)
             {
                 using (ReservContext db = new ReservContext())
                 {
@@ -20,8 +22,8 @@ namespace Reservation
             }
         }
 
-        public static void ChangeName(string fName, string lName, int id)
-        {     
+        public void ChangeName(string fName, string lName, int id)
+        {
             if (fName.Length >= 3 && lName.Length >= 3)
             {
                 using (ReservContext db = new ReservContext())
@@ -37,7 +39,7 @@ namespace Reservation
             }
         }
 
-        public static void Delete(int id)
+        public void Delete(int id)
         {
             using (ReservContext db = new ReservContext())
             {
@@ -47,7 +49,7 @@ namespace Reservation
             }
         }
 
-        public static IQueryable GetUsersWithChar(char firstInitial)
+        public IQueryable GetUsersWithChar(char firstInitial)
         {
             using (ReservContext db = new ReservContext())
             {
