@@ -55,9 +55,6 @@ namespace Reservation
 
             }
 
-
-            UserManager a = new UserManager();
-            a.GetUserReservations();
             Console.Read();
 
         }
