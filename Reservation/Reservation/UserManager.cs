@@ -58,6 +58,54 @@ namespace Reservation
                 db.SaveChanges();
                 return user;
             }
+
         }
+
+        public PersonInfo[] GetUserReservations()
+        {
+            using (ReservContext db = new ReservContext())
+            {
+                var personinfo = from user in db.Users
+                                 join booking in db.BookingUsers on user.Id equals booking.UserId
+                                 group booking by user into gr
+                                 select new PersonInfo
+                                 {
+                                     _Name = gr.Key.Name,
+                                     _Balance = gr.Key.Balance,
+                                     _ReservInfo = gr.Select(i => new ReservationInfo
+                                     {
+                                        _RoomId = i.Booking.RoomId,
+                                        _ReservStart= i.Booking.StartTime
+                                     })
+                                 };
+
+
+                return personinfo.ToArray<PersonInfo>();
+            }   
+        }
+
+
+
+        //private bool _disposed;
+
+        //ReservContext db = new ReservContext();
+        //public void Dispose()
+        //{
+        //    Dispose(true);
+        //    GC.SuppressFinalize(this);
+        //}
+
+        //protected virtual void Dispose(bool disposing)
+        //{
+        //    if (!_disposed)
+        //    {
+        //        if (disposing)
+        //        {
+        //            db.Dispose();
+
+        //        }
+        //    }
+        //    _disposed = true;
+        //}
     }
 }
