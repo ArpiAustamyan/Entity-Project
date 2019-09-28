@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using Reservation.Models;
 
 namespace Reservation
 {
@@ -16,5 +17,8 @@ namespace Reservation
         public string Name { get; set; }
         public string LastName { get; set; }
         public int Balance { get; set; }
+
+        public ICollection<Booking> Boookings { get; set; }
+
     }
 }

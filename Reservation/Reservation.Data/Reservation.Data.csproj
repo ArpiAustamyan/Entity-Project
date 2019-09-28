@@ -48,21 +48,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201909231343191_Reservation.cs" />
-    <Compile Include="Migrations\201909231343191_Reservation.Designer.cs">
-      <DependentUpon>201909231343191_Reservation.cs</DependentUpon>
+    <Compile Include="Migrations\201909241440504_Reservation.cs" />
+    <Compile Include="Migrations\201909241440504_Reservation.Designer.cs">
+      <DependentUpon>201909241440504_Reservation.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201909231553044_Reservation1.cs" />
-    <Compile Include="Migrations\201909231553044_Reservation1.Designer.cs">
-      <DependentUpon>201909231553044_Reservation1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201909232009576_User.cs" />
-    <Compile Include="Migrations\201909232009576_User.Designer.cs">
-      <DependentUpon>201909232009576_User.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201909232016072_Furniture.cs" />
-    <Compile Include="Migrations\201909232016072_Furniture.Designer.cs">
-      <DependentUpon>201909232016072_Furniture.cs</DependentUpon>
+    <Compile Include="Migrations\201909280818246_Reserv.cs" />
+    <Compile Include="Migrations\201909280818246_Reserv.Designer.cs">
+      <DependentUpon>201909280818246_Reserv.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Booking.cs" />
@@ -80,17 +72,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201909231343191_Reservation.resx">
-      <DependentUpon>201909231343191_Reservation.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201909241440504_Reservation.resx">
+      <DependentUpon>201909241440504_Reservation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909231553044_Reservation1.resx">
-      <DependentUpon>201909231553044_Reservation1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909232009576_User.resx">
-      <DependentUpon>201909232009576_User.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909232016072_Furniture.resx">
-      <DependentUpon>201909232016072_Furniture.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201909280818246_Reserv.resx">
+      <DependentUpon>201909280818246_Reserv.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

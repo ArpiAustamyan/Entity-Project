@@ -11,10 +11,10 @@ namespace Reservation.Models
     public class RoomFurniture
     {
         [Key ,Column(Order = 1)]
-        public int? RoomId { get; set; }
+        public int RoomId { get; set; }
 
         [Key, Column(Order = 2)]
-        public int? FurnitureId { get; set; }
+        public int FurnitureId { get; set; }
 
         public int Count { set; get; }
 

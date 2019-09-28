@@ -17,12 +17,15 @@ namespace Reservation.Models
         public DateTime EndTime { set; get; }
         public DateTime ActualStart { set; get; }
         public DateTime ActualEnd { set; get; }
-        public int? RoomId { get; set; }
-        public int? UserId { get; set; }
+        public int RoomId { get; set; }
+        public int UserId { get; set; }
 
         [ForeignKey("RoomId")]
         public Room Room { set; get; }
         [ForeignKey("UserId")]
         public User User { set; get; }
+
+        public ICollection<User> Users { get; set; }
+
     }
 }

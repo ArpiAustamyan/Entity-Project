@@ -9,9 +9,7 @@ C:\Users\santr\OneDrive\Рабочий стол\Entity project\Reservation\Reser
 C:\Users\santr\OneDrive\Рабочий стол\Entity project\Reservation\Reservation.Data\obj\Debug\Reservation.Data.csproj.CopyComplete
 C:\Users\santr\OneDrive\Рабочий стол\Entity project\Reservation\Reservation.Data\obj\Debug\Reservation.Data.dll
 C:\Users\santr\OneDrive\Рабочий стол\Entity project\Reservation\Reservation.Data\obj\Debug\Reservation.Data.pdb
+C:\Users\santr\OneDrive\Рабочий стол\Entity project\Reservation\Reservation.Data\obj\Debug\Reservation.Data.csprojAssemblyReference.cache
 C:\Users\santr\OneDrive\Рабочий стол\Entity project\Reservation\Reservation.Data\obj\Debug\Reservation.Data.Migrations.Reservation.resources
 C:\Users\santr\OneDrive\Рабочий стол\Entity project\Reservation\Reservation.Data\obj\Debug\Reservation.Data.csproj.GenerateResource.cache
-C:\Users\santr\OneDrive\Рабочий стол\Entity project\Reservation\Reservation.Data\obj\Debug\Reservation.Data.Migrations.Reservation1.resources
-C:\Users\santr\OneDrive\Рабочий стол\Entity project\Reservation\Reservation.Data\obj\Debug\Reservation.Data.csprojAssemblyReference.cache
-C:\Users\santr\OneDrive\Рабочий стол\Entity project\Reservation\Reservation.Data\obj\Debug\Reservation.Data.Migrations.User.resources
-C:\Users\santr\OneDrive\Рабочий стол\Entity project\Reservation\Reservation.Data\obj\Debug\Reservation.Data.Migrations.Furniture.resources
+C:\Users\santr\OneDrive\Рабочий стол\Entity project\Reservation\Reservation.Data\obj\Debug\Reservation.Data.Migrations.Reserv.resources

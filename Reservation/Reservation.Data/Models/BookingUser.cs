@@ -11,10 +11,10 @@ namespace Reservation.Models
     public class BookingUser
     {
         [Key,Column(Order = 1)]
-        public int? BookingId { get; set; }
-
+        public int BookingId { get; set; }
+         
         [Key ,Column(Order = 2)]
-        public int? UserId { get; set; }
+        public int UserId { get; set; }
 
         [ForeignKey("BookingId")]
         public Booking Booking { set; get; }
