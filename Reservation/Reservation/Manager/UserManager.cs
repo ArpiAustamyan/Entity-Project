@@ -8,8 +8,23 @@ using static Reservation.ReservationInfo;
 
 namespace Reservation
 {
-    public class UserManager
+    public class UserManager : Manager.Manager
     {
+        public User Find(int id)
+        {
+            using (ReservContext db = new ReservContext())
+            {
+                User u = (User)Find(id,"Users");
+                return u;
+            }
+        }
+
+        public User RemoveById(int id)
+        {
+            User u = (User)RemoveById(id, "Users");
+            return u;
+        }
+
         public void Add(User user)
         {
             if (user.Name.Length >= 3 && user.LastName.Length >= 3)
@@ -74,14 +89,14 @@ namespace Reservation
                                      _Balance = gr.Key.Balance,
                                      _ReservInfo = gr.Select(i => new ReservationInfo
                                      {
-                                        _RoomId = i.Booking.RoomId,
-                                        _ReservStart= i.Booking.StartTime
+                                         _RoomId = i.Booking.RoomId,
+                                         _ReservStart = i.Booking.StartTime
                                      })
                                  };
 
 
                 return personinfo.ToArray<PersonInfo>();
-            }   
+            }
         }
 
 
