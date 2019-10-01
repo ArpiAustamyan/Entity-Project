@@ -21,7 +21,7 @@ namespace Reservation
             return b;
         }
 
-        public Booking[] SearchReservations(string userNameStart)
+        public Booking[] SearchBookings(string userNameStart)
         {
             var booking = (from b in db.Bookings
                            join u in db.Users on b.UserId equals u.Id
@@ -31,7 +31,7 @@ namespace Reservation
             return booking;
         }
 
-        public Booking[] SearchReservations(string userNameStart, int cost)
+        public Booking[] SearchBookings(string userNameStart, int cost)
         {
             var booking = (from b in db.Bookings
                            join u in db.Users on b.UserId equals u.Id
@@ -43,20 +43,33 @@ namespace Reservation
             return booking;
         }
 
-        //public void Find(int id)
-        //{
-        //    var booking = from b in db.Bookings
-        //                  where b.Id == id
-        //                  join bf in db.BookingTechnics on b.Id equals bf.BookingId
-        //                  group bf by b into gr
-        //                  join r in db.Rooms on b.RoomId equals r.Id
-        //                  join rf in db.RoomFurnitures on r.Id equals rf.RoomId
-        //                  group rf by r into gr1
-        //                  select new
-        //                  {
-        //                      //  FullName=
-        //                  };
-        //}
+        public void Add(Booking model)
+        {
+            db.Bookings.Add(model);
+            db.Users.Find(model.UserId).Balance -= model.Room.Price;
+
+        }
+
+        public void BookingInformation(int id)
+        {
+            var booking = from b in db.Bookings
+                          join bt in db.BookingTechnics on b.Id equals bt.BookingId
+                          group bt by b into gr
+                          join rf in db.RoomFurnitures on gr.Key.Id equals rf.RoomId
+                          join r in db.Rooms on rf.FurnitureId equals r.Id
+                          group rf by new { gr, r } into gr1
+                          where gr1.Key.gr.Key.Id == id
+                          select new
+                          {
+                              FullName = gr1.Key.gr.Key.User.Name + " /t" + gr1.Key.gr.Key.User.LastName,
+                              RoomNumber = gr1.Key.r.Id,
+                              FurnitureList=gr1.ToList(),
+                              TechnicList = gr1.Key.gr.ToList(),
+                              Cost = gr1.Key.r.Price +
+                              gr1.Sum(i => i.Count * i.Furniture.HourlyCost) * (gr1.Key.gr.Key.EndTime.Hour - gr1.Key.gr.Key.StartTime.Hour) +
+                              gr1.Key.gr.Sum(i => i.Count * i.Furniture.HourlyCost) * (gr1.Key.gr.Key.EndTime.Hour - gr1.Key.gr.Key.StartTime.Hour)
+                          };
+        }
 
         private bool _disposed;
 

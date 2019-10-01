@@ -20,7 +20,7 @@ namespace Reservation
         public string UserName { get; set; }
         public string Password { get; set; }
 
-        public ICollection<Booking> Boookings { get; set; }
+        public IEnumerable<Booking> Boookings { get; set; }
 
     }
 }
