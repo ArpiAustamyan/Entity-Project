@@ -25,6 +25,5 @@ namespace Reservation
         public DbSet<BookingUser> BookingUsers { get; set; }
 
         public DbSet<RoomFurniture> RoomFurnitures { get; set; }
-
     }
 }
