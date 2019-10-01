@@ -56,6 +56,10 @@
     <Compile Include="Migrations\201909280818246_Reserv.Designer.cs">
       <DependentUpon>201909280818246_Reserv.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201910011018566_UserName.cs" />
+    <Compile Include="Migrations\201910011018566_UserName.Designer.cs">
+      <DependentUpon>201910011018566_UserName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Booking.cs" />
     <Compile Include="Models\BookingTechnic.cs" />
@@ -77,6 +81,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201909280818246_Reserv.resx">
       <DependentUpon>201909280818246_Reserv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910011018566_UserName.resx">
+      <DependentUpon>201910011018566_UserName.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

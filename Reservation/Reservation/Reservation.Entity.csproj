@@ -50,13 +50,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BookingManager.cs" />
-    <Compile Include="PersonInfo.cs" />
+    <Compile Include="Manager\BookingManager.cs" />
+    <Compile Include="EntityModels\PersonInfo.cs" />
+    <Compile Include="Manager\FurnitureManager.cs" />
+    <Compile Include="Manager\Manager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReservationInfo.cs" />
-    <Compile Include="RoomManager.cs" />
-    <Compile Include="UserManager.cs" />
+    <Compile Include="EntityModels\ReservationInfo.cs" />
+    <Compile Include="Manager\RoomManager.cs" />
+    <Compile Include="Manager\UserManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
