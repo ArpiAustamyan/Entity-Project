@@ -7,38 +7,56 @@ using System.Threading.Tasks;
 
 namespace Reservation
 {
-    public class BookingManager : IDisposable
+    public class BookingManager : Manager.Manager, IDisposable
     {
-
-        public void Find(int id)
+        public Booking Find(int id)
         {
-            var booking = db.Bookings.FirstOrDefault<Booking>(b => b.Id == id);
-            if (booking != null)
-            {
-                Console.WriteLine(booking.User.Name + booking.User.LastName);
-                Console.WriteLine("RoomId" + booking.RoomId);
-                var roomFur = db.RoomFurnitures
-                    .Where<RoomFurniture>(rf => rf.RoomId == booking.RoomId);
-                foreach (RoomFurniture rf in roomFur)
-                {
-                    Console.WriteLine("{0}.{1} ", rf.Furniture.Name, rf.Count);
-                }
-
-                var bookFur = db.BookingTechnics
-                   .Where<BookingTechnic>(bt => bt.BookingId == booking.Id);
-                foreach (BookingTechnic bt in bookFur)
-                {
-                    Console.WriteLine("{0}.{1} ", bt.Furniture.Name, bt.Count);
-                }
-                Console.WriteLine(booking.ActualStart + "  " + booking.ActualEnd);
-                Console.WriteLine(booking.Room.Price + booking.Room.Rooms.Price);
-                var bu = db.BookingUsers
-                    .Where<BookingUser>(b => b.BookingId == id)
-                    .Count<BookingUser>();
-                Console.WriteLine(bu);
-
-            }
+            Booking b = (Booking)Find(id, "Bookings");
+            return b;
         }
+
+        public Booking RemoveById(int id)
+        {
+            Booking b = (Booking)RemoveById(id, "Bookings");
+            return b;
+        }
+
+        public Booking[] SearchReservations(string userNameStart)
+        {
+            var booking = (from b in db.Bookings
+                           join u in db.Users on b.UserId equals u.Id
+                           where u.Name.StartsWith(userNameStart)
+                           select b)
+                           .ToArray();
+            return booking;
+        }
+
+        public Booking[] SearchReservations(string userNameStart, int cost)
+        {
+            var booking = (from b in db.Bookings
+                           join u in db.Users on b.UserId equals u.Id
+                           where u.Name.StartsWith(userNameStart)
+                           join r in db.Rooms on b.RoomId equals r.Id
+                           where r.Price == cost
+                           select b)
+                           .ToArray();
+            return booking;
+        }
+
+        //public void Find(int id)
+        //{
+        //    var booking = from b in db.Bookings
+        //                  where b.Id == id
+        //                  join bf in db.BookingTechnics on b.Id equals bf.BookingId
+        //                  group bf by b into gr
+        //                  join r in db.Rooms on b.RoomId equals r.Id
+        //                  join rf in db.RoomFurnitures on r.Id equals rf.RoomId
+        //                  group rf by r into gr1
+        //                  select new
+        //                  {
+        //                      //  FullName=
+        //                  };
+        //}
 
         private bool _disposed;
 
