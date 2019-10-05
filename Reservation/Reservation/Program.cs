@@ -12,8 +12,8 @@ namespace Reservation
         public static void Main(string[] args)
         {
 
-            using (ReservContext db = new ReservContext())
-            {
+            //using (ReservContext db = new ReservContext())
+            //{
                 //Room room1 = new Room { Price = 2000 };
                 //Room room2 = new Room { Price = 3000 };
 
@@ -34,25 +34,27 @@ namespace Reservation
                 //    RoomId =1, UserId=1 };
                 //db.Bookings.Add(booking1);
                 //db.SaveChanges();
-                var bookings = db.Bookings;
-                foreach (Booking b in bookings)
-                {
-                    Console.WriteLine("{0}.{1}", b.Id, b.StartTime);
-                }
 
-                var rooms = db.Rooms;
-                foreach (Room r in rooms)
-                {
-                    Console.WriteLine("{0}.{1}", r.Id, r.Price);
-                }
 
-                var users = db.Users;
-                foreach (User u in users)
-                {
-                    Console.WriteLine("{0}.{1}", u.Id, u.Name);
-                }
+                //var bookings = db.Bookings;
+                //foreach (Booking b in bookings)
+                //{
+                //    Console.WriteLine("{0}.{1}", b.Id, b.StartTime);
+                //}
 
-            }
+                //var rooms = db.Rooms;
+                //foreach (Room r in rooms)
+                //{
+                //    Console.WriteLine("{0}.{1}", r.Id, r.Price);
+                //}
+
+                //var users = db.Users;
+                //foreach (User u in users)
+                //{
+                //    Console.WriteLine("{0}.{1}", u.Id, u.Name);
+                //}
+
+           // }
 
             Console.Read();
 

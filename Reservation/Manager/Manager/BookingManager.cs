@@ -13,18 +13,29 @@ namespace Reservation
 
         public void Add(BookingModel model)
         {
-            Booking booking = new Booking();
-            booking.StartTime = model._StratTime;
-            booking.EndTime = model._EndTime;
-            booking.RoomId = model._RoomNumber;
-            booking.UserId = model._UserId;
+            Booking booking = new Booking
+            {
+                StartTime = model._StratTime,
+                EndTime = model._EndTime,
+                RoomId = model._RoomNumber,
+                UserId = model._UserId
+            };
 
             var booking_user = model._Users.Select(i => new BookingUser
             {
                 Booking = booking,
                 UserId = i
             });
-            var some = db.BookingUsers.AddRange(booking_user);
+
+            var booking_furn = model._Technic.Select(i => new BookingTechnic
+            {
+                Booking = booking,
+                FurnitureId = db.BookingTechnics.Where(l => l.Furniture.Name == i._Name).FirstOrDefault().FurnitureId,
+                Count = i._Count
+            });
+            
+            db.BookingUsers.AddRange(booking_user);
+            db.BookingTechnics.AddRange(booking_furn);
         }
 
         public Booking Find(int id)

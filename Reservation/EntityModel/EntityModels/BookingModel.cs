@@ -1,4 +1,5 @@
-﻿using Reservation.Models;
+﻿using EntityModel.EntityModels;
+using Reservation.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,7 @@ namespace Reservation.EntityModels
         public int _RoomNumber { set; get; }
         public int _UserId { set; get; }
         public List<int> _Users { set; get; }
-        public List<Furniture> _Furn { set; get; }
+        public List<Technic> _Technic { set; get; }
         public DateTime _StratTime { set; get; }
         public DateTime _EndTime { set; get; }
     }
