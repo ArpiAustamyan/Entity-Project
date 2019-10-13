@@ -33,9 +33,10 @@ namespace Reservation
                 FurnitureId = db.BookingTechnics.Where(l => l.Furniture.Name == i._Name).FirstOrDefault().FurnitureId,
                 Count = i._Count
             });
-            
+
             db.BookingUsers.AddRange(booking_user);
             db.BookingTechnics.AddRange(booking_furn);
+            db.Bookings.Add(booking);
         }
 
         public Booking Find(int id)
@@ -85,9 +86,9 @@ namespace Reservation
                           {
                               _FullName = gr1.Key.gr.Key.User.Name + " /t" + gr1.Key.gr.Key.User.LastName,
                               _RoomNumber = gr1.Key.r.Id,
-                              _FurnitureList=gr1.ToList(),
+                              _FurnitureList = gr1.ToList(),
                               _TechnicList = gr1.Key.gr.ToList(),
-                              _StartTime=gr1.Key.gr.Key.StartTime,
+                              _StartTime = gr1.Key.gr.Key.StartTime,
                               _EndTime = gr1.Key.gr.Key.EndTime,
                               _Cost = gr1.Key.r.Price +
                               gr1.Sum(i => i.Count * i.Furniture.HourlyCost) * (gr1.Key.gr.Key.EndTime.Hour - gr1.Key.gr.Key.StartTime.Hour) +

@@ -10,5 +10,9 @@ namespace EntityModel.EntityModels
     {
         public int _Id { set; get; }
         public int _Count { set; get; }
+
+        public string _Name { set; get; }
+        public int _Price { set; get; }
+
     }
 }
