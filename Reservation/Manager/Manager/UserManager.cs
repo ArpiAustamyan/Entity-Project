@@ -1,4 +1,5 @@
-﻿using Reservation.Models;
+﻿using EntityModel.EntityModels;
+using Reservation.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,11 +11,50 @@ namespace Reservation
 {
     public class UserManager : Manager.Manager
     {
+        public void Add(UserModel model)
+        {
+            using (ReservContext db = new ReservContext())
+            {
+                var user = db.Users.Add(new User
+                {
+                    Name = model._FirstName,
+                    LastName = model._LastName
+                });
+            }
+        }
+
+        public void Edit(UserModel model)
+        {
+            using (ReservContext db = new ReservContext())
+            {
+                var user_edit = db.Users.Where(i => i.Id == model._Id).FirstOrDefault();
+                user_edit.Name = model._FirstName;
+                user_edit.LastName = model._LastName;
+                db.SaveChanges();
+            }
+        }
+
+        public UserModel[] GetUsers()
+        {
+            using (ReservContext db = new ReservContext())
+            {
+                var users = (from u in db.Users
+                             select new UserModel
+                             {
+                                 _Id = u.Id,
+                                 _FirstName = u.Name,
+                                 _LastName = u.LastName
+                             }).ToArray();
+
+                return users;
+            }
+        }
+
         public User Find(int id)
         {
             using (ReservContext db = new ReservContext())
             {
-                User u = (User)Find(id,"Users");
+                User u = (User)Find(id, "Users");
                 return u;
             }
         }
@@ -98,8 +138,6 @@ namespace Reservation
                 return personinfo.ToArray<PersonInfo>();
             }
         }
-
-
 
         //private bool _disposed;
 
