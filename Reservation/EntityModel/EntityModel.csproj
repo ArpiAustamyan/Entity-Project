@@ -43,14 +43,22 @@
   <ItemGroup>
     <Compile Include="EntityModels\AllBookingInformation.cs" />
     <Compile Include="EntityModels\BookingModel.cs" />
+    <Compile Include="EntityModels\FurnitureModel.cs" />
     <Compile Include="EntityModels\PersonInfo.cs" />
     <Compile Include="EntityModels\ReservationInfo.cs" />
+    <Compile Include="EntityModels\RoomModel.cs" />
+    <Compile Include="EntityModels\Technic.cs" />
+    <Compile Include="EntityModels\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Reservation.Data\Reservation.Data.csproj">
+    <ProjectReference Include="..\Data\Data.csproj">
+      <Project>{1567740C-BD87-4136-ABCE-9F2AB9B17074}</Project>
+      <Name>Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Reservation.Data\Context.csproj">
       <Project>{597ADC49-15D3-48D5-A91F-CBFC959CF9C2}</Project>
-      <Name>Reservation.Data</Name>
+      <Name>Context</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

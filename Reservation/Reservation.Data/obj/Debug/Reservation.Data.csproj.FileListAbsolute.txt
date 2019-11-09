@@ -14,3 +14,6 @@ C:\Users\santr\OneDrive\Рабочий стол\Entity project\Reservation\Reser
 C:\Users\santr\OneDrive\Рабочий стол\Entity project\Reservation\Reservation.Data\obj\Debug\Reservation.Data.csproj.GenerateResource.cache
 C:\Users\santr\OneDrive\Рабочий стол\Entity project\Reservation\Reservation.Data\obj\Debug\Reservation.Data.Migrations.Reserv.resources
 C:\Users\santr\OneDrive\Рабочий стол\Entity project\Reservation\Reservation.Data\obj\Debug\Reservation.Data.Migrations.UserName.resources
+C:\Users\santr\OneDrive\Рабочий стол\Entity project\Reservation\Reservation.Data\bin\Debug\Data.dll
+C:\Users\santr\OneDrive\Рабочий стол\Entity project\Reservation\Reservation.Data\bin\Debug\Data.pdb
+C:\Users\santr\OneDrive\Рабочий стол\Entity project\Reservation\Reservation.Data\bin\Debug\Data.dll.config

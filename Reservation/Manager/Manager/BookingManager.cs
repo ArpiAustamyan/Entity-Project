@@ -87,7 +87,7 @@ namespace Reservation
                               _FullName = gr1.Key.gr.Key.User.Name + " /t" + gr1.Key.gr.Key.User.LastName,
                               _RoomNumber = gr1.Key.r.Id,
                               _FurnitureList = gr1.ToList(),
-                              _TechnicList = gr1.Key.gr.ToList(),
+                              _TechnicList = gr1.Key.gr.ToList(),   
                               _StartTime = gr1.Key.gr.Key.StartTime,
                               _EndTime = gr1.Key.gr.Key.EndTime,
                               _Cost = gr1.Key.r.Price +

@@ -59,17 +59,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Data\Data.csproj">
+      <Project>{1567740C-BD87-4136-ABCE-9F2AB9B17074}</Project>
+      <Name>Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\EntityModel\EntityModel.csproj">
       <Project>{5FE8C7C8-4623-4A4B-B018-BCA47F43E534}</Project>
       <Name>EntityModel</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Reservation.Data\Reservation.Data.csproj">
+    <ProjectReference Include="..\Reservation.Data\Context.csproj">
       <Project>{597ADC49-15D3-48D5-A91F-CBFC959CF9C2}</Project>
-      <Name>Reservation.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Reservation\Reservation.Entity.csproj">
-      <Project>{7E63381F-D9DD-457C-A420-F2388BF92AE1}</Project>
-      <Name>Reservation.Entity</Name>
+      <Name>Context</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
